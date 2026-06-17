@@ -41,12 +41,14 @@ def main():
     parser.add_argument("csv")
     args = parser.parse_args()
 
+    # we call the anomaly detection function and get the metrics.
     metrics = detect_anomalies(args.csv)
 
     # A turbine is failing if it breaks either rule.
     metrics["failing"] = metrics["temp_anomaly"] | metrics["vibration_anomaly"]
     failing = metrics[metrics["failing"]]
 
+    # If no turbines are failing, we print a message and exit.
     if failing.empty:
         print("All turbines operating within safe limits. No anomalies detected.")
         return
