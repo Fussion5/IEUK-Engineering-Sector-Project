@@ -25,7 +25,7 @@ Use this if you already have Python installed on your computer.
 Step 1 — Open a terminal (PowerShell on Windows, Terminal on Mac).
 
 Step 2 — Navigate to this folder. For example:
-    cd C:\Users\YourName\Downloads\IEUK
+    cd C:\Users\YourName\Downloads\<ThisFolder>
 
 Step 3 — Install the required library (only needed once):
     pip install pandas
@@ -47,7 +47,7 @@ You'll need Docker Desktop installed (free download from docker.com).
 Step 1 — Make sure Docker Desktop is open and running.
 
 Step 2 — Open a terminal and navigate to this folder:
-    cd C:\Users\YourName\Downloads\IEUK
+    cd C:\Users\YourName\Downloads\<ThisFolder>
 
 Step 3 — Build the Docker image (only needed once):
     "docker build -t aerogrid-anomaly ."
